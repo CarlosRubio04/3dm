@@ -10,6 +10,7 @@
         text-align: right;
         font-size: 35px;
         margin-top: 0;
+        margin-bottom: 12px;
         span {
             font-weight: 600;
         }
@@ -30,6 +31,14 @@
                     font-weight: 600;
                 }
             }
+        }
+    }
+
+    &-logo {
+        display: inherit;
+        align-items: flex-end;
+        img {
+            margin-top: auto;
         }
     }
 }

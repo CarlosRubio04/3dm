@@ -2,6 +2,7 @@
 @mixin btn-styles($btn-color, $btn-states-color) {
     background-color: $btn-color;
     border-color: $btn-color;
+    border-radius: 0;
     color: $white-color;
     @include opacity(1);
 
@@ -52,7 +53,7 @@
     &.active,
     .open > &.dropdown-toggle {
       background-color: $btn-color;
-      color: $fill-font-color;
+      color: $primary-color;
       border-color: $btn-color;
       .caret{
           border-top-color: $fill-font-color;

@@ -9,6 +9,7 @@ import { HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
@@ -21,6 +22,7 @@ import { HomeModule } from './home/home.module';
     AppComponent,
     NavbarComponent,
     HomeComponent,
+    AboutComponent,
     FooterComponent
   ],
   imports: [

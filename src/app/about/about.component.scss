@@ -1,0 +1,141 @@
+@import '../../assets/sass/app-kit/_variables.scss';
+@import '../../assets/sass/app-kit/_mixins.scss';
+
+.hero {
+    position: relative;
+    min-height: 762px;
+    widows: 100%;
+    background-color: $white-color;
+    background-image: url(../../assets/img/about-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &-container {
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        grid-gap: 100px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-slider {
+        height: 625px;
+        background-image: url(../../assets/img/iphone.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .carousel-content {
+            width: 264px;
+            margin: 0 auto;
+            padding: 75px 0;
+            img {
+                width: 263px;
+                margin-bottom: 0;
+                height: auto;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .name {
+                text-align: center;
+                color: #146CB4;
+                font-size: 22px;
+                font-weight: 700;
+            }
+            .winner {
+                text-align: center;
+                padding: 12px;
+            }
+        }
+    }
+
+    &-content {
+        color: #fff;
+        h1 {
+            font-size: 40px;
+            text-transform: uppercase;
+            span {
+                font-weight: 800;
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.about {
+    background-color: $white-color;
+    padding: 22px 0;
+
+    .items {
+        .col-md-4 {
+            text-align: center;
+            .icon {
+                color: $primary-color;
+            }
+            .content {
+                h4 {
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-bottom: 20px;
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 40px;
+                        border-top: 2px solid $primary-color;
+                        margin: 8px auto 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    
+    h2 {
+        color: #146CB4;
+        text-transform: uppercase;
+        span {
+            font-weight: 800;
+        }
+    }
+    h4 {
+        color: #146CB4;
+    }
+    p {
+        margin-top: 12px;
+    }
+}
+
+.countries {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 62px;
+    .item {
+        h4 {
+            color: #146CB4;
+            font-weight: 500;
+            font-size: 15px;
+            margin-top: 4px;
+        }
+        i {
+            font-size: 12px;
+            font-weight: 100;
+        }
+    }
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 46px 0;
+}

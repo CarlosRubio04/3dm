@@ -1,0 +1,69 @@
+@import '../../assets/sass/app-kit/_variables.scss';
+@import '../../assets/sass/app-kit/_mixins.scss';
+
+.hero {
+    position: relative;
+    min-height: 762px;
+    widows: 100%;
+    background-color: $white-color;
+    background-image: url(../../assets/img/about-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &-container {
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        grid-gap: 100px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-slider {
+        height: 625px;
+        background-image: url(../../assets/img/iphone.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .carousel-content {
+            width: 264px;
+            margin: 0 auto;
+            padding: 75px 0;
+            img {
+                width: 263px;
+                margin-bottom: 0;
+                height: auto;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .name {
+                text-align: center;
+                color: #146CB4;
+                font-size: 22px;
+                font-weight: 700;
+            }
+            .winner {
+                text-align: center;
+                padding: 12px;
+            }
+        }
+    }
+
+    &-content {
+        color: #fff;
+        h1 {
+            font-size: 40px;
+            text-transform: uppercase;
+            span {
+                font-weight: 800;
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}

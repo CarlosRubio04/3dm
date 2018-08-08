@@ -41,8 +41,37 @@
 }
 
 .cards {
+    margin: 24px 0;
     &-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 136px auto;
+        grid-template-rows: 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas: "thumn desc"
+                             "thumn cta";
+        figure {
+            margin-bottom: 0;
+            grid-area: thumn;
+
+            img {
+                border-radius: 5px 0 0 5px;
+            }
+        }
+        &-desc {
+            grid-area: desc;
+        }
+        &-cta {
+            grid-area: cta;
+            padding-bottom: 8px;
+
+            .btn {
+                margin: 4px 0;
+            }
+        }
     }
 }

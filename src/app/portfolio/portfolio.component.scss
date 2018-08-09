@@ -48,10 +48,11 @@
     }
 
     .card {
+        background-color: #FCFCFC;
         display: grid;
         grid-template-columns: 136px auto;
         grid-template-rows: 1fr auto;
-        grid-gap: 10px;
+        grid-gap: 15px;
         grid-template-areas: "thumn desc"
                              "thumn cta";
         figure {
@@ -64,6 +65,14 @@
         }
         &-desc {
             grid-area: desc;
+
+            p {
+                color: #888B8D;
+                font-size: 12px;
+            }
+            h4 {
+                color: $primary-color;
+            }
         }
         &-cta {
             grid-area: cta;

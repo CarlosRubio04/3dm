@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { PromoComponent } from './promos/promo.component';
 
 import { HomeModule } from './home/home.module';
 
@@ -24,6 +25,7 @@ import { HomeModule } from './home/home.module';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
+    PromoComponent,
     PortfolioComponent,
     FooterComponent
   ],

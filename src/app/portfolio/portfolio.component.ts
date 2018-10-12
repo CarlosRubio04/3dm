@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from '../services/main.service';
 
 @Component({
     selector: 'app-portfolio',
@@ -12,7 +13,14 @@ export class PortfolioComponent implements OnInit {
         middle: false,
         right: false
     };
-    constructor() { }
 
-    ngOnInit() {}
+    items: any = [];
+    constructor(private mainService: MainService) { }
+
+    ngOnInit() {
+        this.mainService.getPortafolio().valueChanges().subscribe( items => {
+            this.items = items;
+            console.log(this.items);
+        });
+    }
 }

@@ -7,6 +7,11 @@ import { AppRoutingModule } from './app.routing';
 
 import { HttpModule} from '@angular/http';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+
+import { MainService } from './services/main.service';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -19,6 +24,15 @@ import { HomeModule } from './home/home.module';
 
 
 
+export const firebaseConfig = {
+  apiKey: 'AIzaSyDkXbn2uVR9LvgdvLIpFxczRnSw6sK7q2U',
+  authDomain: 'dm-web-f9313.firebaseapp.com',
+  databaseURL: 'https://dm-web-f9313.firebaseio.com',
+  projectId: 'dm-web-f9313',
+  storageBucket: 'dm-web-f9313.appspot.com',
+  messagingSenderId: '671565414794'
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +44,8 @@ import { HomeModule } from './home/home.module';
     FooterComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     BrowserModule,
     NgbModule.forRoot(),
     FormsModule,
@@ -38,7 +54,7 @@ import { HomeModule } from './home/home.module';
     HomeModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MainService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

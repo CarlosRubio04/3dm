@@ -20,7 +20,6 @@ export class PortfolioComponent implements OnInit {
     ngOnInit() {
         this.mainService.getPortafolio().valueChanges().subscribe( items => {
             this.items = items;
-            console.log(this.items);
         });
     }
 }

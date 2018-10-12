@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from '../services/main.service';
 
 @Component({
     selector: 'app-promo',
@@ -12,7 +13,12 @@ export class PromoComponent implements OnInit {
         middle: false,
         right: false
     };
-    constructor() { }
+    items: any = [];
+    constructor(private mainService: MainService) { }
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.mainService.getPromos().valueChanges().subscribe( items => {
+            this.items = items;
+        });
+    }
 }

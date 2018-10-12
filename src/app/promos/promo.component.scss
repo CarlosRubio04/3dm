@@ -13,6 +13,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    padding: 0 16px;
+
+    @include for-phone-only {
+        align-items: center;
+        min-height: 400px;
+    }
 
     &-container {
         width: 100%;
@@ -22,6 +28,17 @@
         grid-gap: 10px;
         justify-content: center;
         align-items: center;
+        @include for-phone-only {
+            grid-template-columns: 1fr;
+
+        }
+    }
+
+    .phone {
+
+        @include for-phone-only {
+            display: none;
+        }
     }
 
     .title {
@@ -29,6 +46,10 @@
             color: $white-color;
             text-align: right;
             font-size: 40px;
+            @include for-phone-only {
+                text-align: left;
+                font-size: 26px;
+            }
         }
     }
 
@@ -37,6 +58,9 @@
             color: $white-color;
             font-size: 22px;    
             font-weight: 200;
+            @include for-phone-only {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -46,6 +70,9 @@
     &-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        @include for-phone-only {
+            grid-template-columns: 1fr;
+        }
     }
 
     .card {

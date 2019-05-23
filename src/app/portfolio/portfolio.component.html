@@ -28,7 +28,7 @@
                 <div class="cards-container">
                     <div class="card" *ngFor="let item of items">
                         <figure>
-                            <img src="../../assets/img/thumnail.png" alt="thumnail">
+                            <img [src]="item.image" alt="thumnail">
                         </figure>
                         <div class="card-desc">
                             <h4>{{ item.title }}</h4>
@@ -37,7 +37,7 @@
                             </p>
                         </div>
                         <div class="card-cta">
-                            <a href="{{ item.action }}" class="btn btn-primary">
+                            <a target="_blank" href="{{ item.action }}" class="btn btn-primary">
                                 lo quiero
                             </a>
                             <button class="btn btn-outline-primary" (click)="openModal(item)">

@@ -20,4 +20,11 @@ export class MainService {
   public getPromoItem(id) {
     return this.afDB.object('data/promos/' + id);
   }
+
+  public getHeroSlides() {
+    return this.afDB.object('data/slies/hero');
+  }
+  public getBigSlides() {
+    return this.afDB.object('data/slies/big');
+  }
 }

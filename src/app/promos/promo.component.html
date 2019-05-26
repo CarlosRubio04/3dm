@@ -31,16 +31,18 @@
                             <img src="../../assets/img/thumnail.png" alt="thumnail">
                         </figure>
                         <div class="card-desc">
+                            <span>{{ item.operador }}</span>
                             <h4>{{ item.title }}</h4>
                             <p>
                                 {{ item.description }}
                             </p>
-                            <small>Del 21 de abril al 20 de mayo de 2018</small>
+                            <small class="date">{{ item.date }}</small> <br>
+                            <i class="winner">{{ item.ganador }}</i>
                         </div>
                         <div class="card-cta">
-                            <button class="btn btn-outline-primary">
+                            <a class="btn btn-outline-primary" target="_blank" href="{{ item.action }}">
                                 Desacargar TYC
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

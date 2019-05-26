@@ -92,13 +92,31 @@
         }
         &-desc {
             padding: 12px;
-
+            span {
+                position: absolute;
+                right: 12px;
+                color: $primary-color;
+                font-weight: 700;
+                font-size: 12px;
+            }
             p {
                 color: #888B8D;
                 font-size: 12px;
             }
             h4 {
+                color: $warning-color;
+                font-weight: 600;
+            }
+
+            .date {
                 color: $primary-color;
+                font-size: 16px;
+                font-weight: 200;
+            }
+            .winner {
+                font-weight: 600;
+                font-size: 12px;
+                color: $warning-color;
             }
         }
         &-cta {

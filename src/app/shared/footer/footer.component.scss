@@ -5,6 +5,9 @@
     background-color: #146CB4;
     padding: 80px 0;
 
+    @include for-phone-only {
+        padding: 20px 0;
+    }
     h2 {
         color: $white-color;
         text-align: right;
@@ -17,6 +20,17 @@
     }
     &-title {
         text-align: right;
+
+        @include for-phone-only {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            @include for-phone-only {
+                text-align: left;
+            }
+        }
     }
     &-data {
         padding-left: 16px;
